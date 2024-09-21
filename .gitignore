@@ -1,0 +1,16 @@
+# Binaries
+*.exe
+*.o
+*.so
+*.dll
+bin/
+
+# Directories
+vendor/
+node_modules/
+temp/
+logs/
+.env
+
+# Docker files
+dbdata/
