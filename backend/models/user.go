@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type User struct {
     gorm.Model
-    Name     string `json:"name"`
-    Email    string `json:"email" gorm:"unique"`
-    Password string `json:"password"`
+    Name     string `json:"name" gorm:"type:varchar(100);not null"`
+	Email    string `json:"email" gorm:"type:varchar(100);unique;not null"`
+	Password string `json:"-" gorm:"not null"`  // Omit password in JSON responses
 }
